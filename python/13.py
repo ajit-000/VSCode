@@ -1,0 +1,6 @@
+t1 = (15, 20, 109, 45, 74)
+print(id(t1))
+L = sorted(t1)
+t1=tuple(L)
+print(type(L))
+print(t1)

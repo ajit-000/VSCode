@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "html",
+        "code-runner.runInTerminal": true,
+        "files.associations": {
+            "stdio.h": "c"
+        }
+    }
+}
