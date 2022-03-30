@@ -3,23 +3,10 @@ class Node:
         self.data = data
         self.nextNode = None
 
-# function to create and return a Node
-
-
-def getNode(data):
-
-    # allocating space
-    newNode = Node(data)
-    return newNode
-
-# function to insert a Node at required position
-
 
 def insertPos(headNode, position, data):
     head = headNode
 
-    # This condition to check whether the
-    # position given is valid or not.
     if (position < 1):
         print("Invalid position!")
 
@@ -29,22 +16,12 @@ def insertPos(headNode, position, data):
         head = newNode
 
     else:
-
-        # Keep looping until the position is zero
         while (position != 0):
             position -= 1
 
             if (position == 1):
-
-                # adding Node at required position
-                newNode = getNode(data)
-
-                # Making the new Node to point to
-                # the old Node at the same position
+                newNode = Node(data)
                 newNode.nextNode = headNode.nextNode
-
-                # Replacing headNode with new Node
-                # to the old Node to point to the new Node
                 headNode.nextNode = newNode
                 break
 
@@ -55,9 +32,6 @@ def insertPos(headNode, position, data):
             print("position out of range")
     return head
 
-# This function prints contents
-# of the linked list
-
 
 def printList(head):
     while (head != None):
@@ -66,14 +40,13 @@ def printList(head):
     print()
 
 
-# Driver Code
 if __name__ == '__main__':
 
     # Creating the list 3.5.8.10
-    head = getNode(3)
-    head.nextNode = getNode(5)
-    head.nextNode.nextNode = getNode(8)
-    head.nextNode.nextNode.nextNode = getNode(10)
+    head = Node(3)
+    head.nextNode = Node(5)
+    head.nextNode.nextNode = Node(8)
+    head.nextNode.nextNode.nextNode = Node(10)
     print("Linked list before insertion: ", end='')
     printList(head)
     data = 12
