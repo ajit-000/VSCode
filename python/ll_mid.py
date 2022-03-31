@@ -1,37 +1,3 @@
-# class Node:
-#     def __init__(self, data):
-#         self.data = data
-#         self.next = None
-
-
-# class LL:
-#     def __init__(self):
-#         self.head = None
-
-#     def printList(self):
-#         temp = self.head
-#         while (temp):
-#             print(temp.data, end=" ")
-#             temp = temp.next
-
-#     def midll(self):
-#         headnode = self.head
-#         cnt = 0
-#         while headnode.next != None:
-#             cnt += 1
-#         print(cnt)
-
-
-# if __name__ == "__main__":
-#     link = LL()
-#     link.head = Node(1)
-#     sec = Node(2)
-#     th = Node(3)
-#     link.head.next = sec
-#     sec.next = th
-#     link.printList()
-#     link.midll()
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -43,11 +9,31 @@ class LL:
         self.head = None
 
     def midll(self):
-        headnode = self.head
+        temp = self.head
         cnt = 0
-        while headnode.next != None:
+        while temp != None:
             cnt += 1
-        print(cnt)
+            temp = temp.next
+        # print("\n",cnt)
+        temp = self.head
+        for i in range(cnt//2):
+            temp = temp.next
+        print("\n")
+        print(temp.data)
+
+    def midll_optimised(self):
+        fast = self.head
+        slow = self.head
+
+        if self.head is None:
+            print("invalid node")
+            return
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+        print()
+        print(slow.data)
 
     def printList(self):
         temp = self.head
@@ -61,7 +47,11 @@ if __name__ == "__main__":
     link.head = Node(input())
     sec = Node(input())
     th = Node(input())
+    fr = Node(input())
+    fv = Node(input())
     link.head.next = sec
     sec.next = th
+    th.next = fr
+    fr.next = fv
     link.printList()
-    link.midll()
+    link.midll_optimised()
