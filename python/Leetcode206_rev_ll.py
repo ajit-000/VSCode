@@ -27,14 +27,29 @@ class LL:
             temp = temp.next
 
 
+def recursive_reverse(prev, curr):
+    h = curr
+    if curr != None:
+        recursive_reverse(curr, curr.next)
+        curr.next = prev
+    else:
+        h = prev
+
+
 if __name__ == "__main__":
     link = LL()
     link.head = Node(input())
+    headnode = link.head
     sec = Node(input())
     th = Node(input())
     link.head.next = sec
     sec.next = th
     link.printList()
     print()
-    link.head = link.rev_ll()
+
+    # link.head = link.rev_ll() # When we solving without Recursion
+    # link.printList()
+
+    # Recursive Method:-
+    recursive_reverse(None, headnode)
     link.printList()
