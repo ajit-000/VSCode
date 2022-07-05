@@ -1,5 +1,6 @@
 # Brute-Force approach to solve Bus Station 10/24 test cases passes only
 
+
 # def countDivisors(n) :
 #     cnt = []
 #     for i in range(1, (int)(math.sqrt(n)) + 1) :
