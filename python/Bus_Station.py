@@ -29,26 +29,35 @@
 # Optimised Solution :
 
 
-def Bus_Station(lst):
+def solve(a):
     sa = []
+    d = {}
     res = []
-    sa.append(lst[0])
-    for i in range(1, len(lst)):
-        sa.append(sa[i-1]+lst[i])
-    for i in lst:
-        if (lst[-1] % i == 0):
+    sa.append(a[0])
+    d[a[0]] = 0
+    for i in range(1, len(a)):
+        sa.append(sa[i-1]+a[i])
+        d[sa[i]] = i
+    # print(sa)
+    # print(d)
+    m = sa[-1]
+    for i in sa:
+        if m % i != 0:
             continue
-        j = 1
-        while (lst[i]*j <= lst[-1]):
-            if(lst[i]*j in sa):
-                j += 1
-            else:
-                break
         else:
-            res.append(lst[i])
+            j = 1
+            while(i*j <= m):
+                if(i*j in d):
+                    j += 1
+                else:
+                    break
+            else:
+                res.append(i)
+
     return res
 
 
 if __name__ == "__main__":
     lst = list(map(int, input().split()))
-    print(Bus_Station(lst))
+    solve(lst)
+    print(solve(lst))
