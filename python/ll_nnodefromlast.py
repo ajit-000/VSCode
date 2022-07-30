@@ -21,7 +21,7 @@ class LL:
         while curr != None:
             prev = prev.next
             curr = curr.next
-        print("\n",prev.data)
+        print(prev.data)
 
 
 if __name__ == "__main__":
@@ -37,5 +37,4 @@ if __name__ == "__main__":
     fr.next = fv
     link.printList()
     print()
-    link.nth_node(
-        int(input("Enter Position :")))
+    link.nth_node(int(input("Enter Position :")))
