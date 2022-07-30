@@ -3,7 +3,7 @@ def add_rev_pal(n):
     while n != int(sn[::-1]):
         n += int(sn[::-1])
         sn = str(n)
-    return f"{n} is pallindom now"
+    return f"{n} is pallindom"
 
 
 

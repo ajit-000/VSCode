@@ -1,16 +1,16 @@
 import math
 n = int(input("Enter the number to find all it's divisor :"))
 i = 1
-while i < math.sqrt(n):
+while i*i < n:
     if n % i == 0:
         print(i, end=" ")
         print(n//i, end=" ")
     i += 1
 if i*i == n:
-    print(i, "are divisors of", n)
+    print(i)
 
 # Using for loop
-#If we use for loop then the numbers with perfect square 
+# If we use for loop then the numbers with perfect square
 # are printed twice
 
 # import math
