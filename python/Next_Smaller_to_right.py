@@ -1,26 +1,28 @@
 # Optimised Solution in O(n):
 
 
-lst = list(map(int, input().split()))
-l = len(lst)
-st = []
-res = []
-for i in range(l-1, -1, -1):
-    if len(st) == 0:
-        res.append(-1)
-        st.append(lst[i])
-    else:
-        while len(st)!= 0:
-            x = st.pop()
-            if x < lst[i]:
-                st.append(x)
-                st.append(lst[i])
-                res.append(x)
-                break
+def nextGreaterElementToRight(arr, n):
+    s = []
+    v = []
+    for i in range(n-1, -1, -1):
+        while(len(s) != 0 and s[-1] <= arr[i]):
+            s.pop()
+        if len(s) == 0:
+            v.append(-1)
         else:
-            res.append(-1)
-            st.append(lst[i])
-print(res)
+            v.append(s[-1])
+        s.append(arr[i])
+    v.reverse()
+    return v
+
+
+if __name__ == '__main__':
+
+    arr = list(map(int, input().split()))
+    ans = nextGreaterElementToRight(arr, len(arr))
+    print(ans)
+
+
 
 
 # Solution in complexity of O(n^2):
