@@ -6,6 +6,8 @@ def check(s):
     for i, j in d.items():
         if j == 1:
             lst.append(i)
+    if len(lst)==0:
+        return -1
     return lst
 
 
