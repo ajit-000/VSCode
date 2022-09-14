@@ -11,7 +11,6 @@ from collections import Counter
 
 def majelem(lst):
     cnt = 0
-    major = lst[0]
     for i in lst:
         if cnt == 0:
             major = i
@@ -24,4 +23,4 @@ def majelem(lst):
 
 if __name__ == "__main__":
     nums = list(map(int, input().split()))
-    print(majorityElement(nums))
+    print(majelem(nums))
