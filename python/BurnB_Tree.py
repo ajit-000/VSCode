@@ -10,10 +10,10 @@ class Node:
 queue = deque()
 
 
-def burntree(root, targetNode):
+def burntree(root, target):
     if root is None:
         return 0
-    if root.data == targetNode:
+    if root.data == target:
         print(root.data)
         if root.left:
             queue.append(root.left)
@@ -21,7 +21,7 @@ def burntree(root, targetNode):
             queue.append(root.right)
         return 1
 
-    left = burntree(root.left, targetNode)
+    left = burntree(root.left, target)
     if(left == 1):
         queueSize = len(queue)
         for i in range(queueSize):
@@ -37,7 +37,7 @@ def burntree(root, targetNode):
         print(root.data)
         return 1
 
-    right = burntree(root.right, targetNode)
+    right = burntree(root.right, target)
     if(right == 1):
         queueSize = len(queue)
         for i in range(queueSize):
