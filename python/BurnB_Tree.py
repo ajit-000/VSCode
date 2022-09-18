@@ -15,9 +15,9 @@ def burntree(root, targetNode):
         return 0
     if root.data == targetNode:
         print(root.data)
-        if root.left is not None:
+        if root.left:
             queue.append(root.left)
-        if root.right is not None:
+        if root.right:
             queue.append(root.right)
         return 1
 
@@ -27,12 +27,12 @@ def burntree(root, targetNode):
         for i in range(queueSize):
             current = queue.popleft()
             print(current.data, end=" ")
-            if current.left is not None:
+            if current.left:
                 queue.append(current.left)
-            if current.right is not None:
+            if current.right:
                 queue.append(current.right)
 
-        if root.right is not None:
+        if root.right:
             queue.append(root.right)
         print(root.data)
         return 1
@@ -43,12 +43,12 @@ def burntree(root, targetNode):
         for i in range(queueSize):
             current = queue.popleft()
             print(current.data, end=" ")
-            if current.left is not None:
+            if current.left:
                 queue.append(current.left)
-            if current.right is not None:
+            if current.right:
                 queue.append(current.right)
 
-        if root.left is not None:
+        if root.left:
             queue.append(root.left)
         print(root.data)
         return 1
