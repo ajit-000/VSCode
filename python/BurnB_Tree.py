@@ -3,8 +3,8 @@ from collections import deque
 
 class Node:
     def __init__(self, root):
-        root = root
-        left = right = None
+        self.data = root
+        self.left = self.right = None
 
 
 queue = deque()
@@ -65,4 +65,13 @@ if __name__ == "__main__":
     root.left.right.left = Node(7)
     root.left.right.right = Node(4)
     target = int(input("Enter the target node: "))
-    print(burntree(root, target))
+    burntree(root, target)
+    while queue:
+        for i in range(len(queue)):
+            x = queue.popleft()
+            print(x.data, end=" ")
+            if x.left:
+                queue.append(x.left)
+            if x.right:
+                queue.append(x.right)
+        print()
