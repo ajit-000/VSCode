@@ -22,7 +22,7 @@ def lis(arr):
         for j in range(i):
             if arr[i] > arr[j] and dp[j] >= dp[i]:
                 dp[i] = 1+dp[j]
-    print(dp)
+    print(max(dp))
 
 
 if __name__ == "__main__":
