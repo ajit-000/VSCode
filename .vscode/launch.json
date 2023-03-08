@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FirstClass",
+            "request": "launch",
+            "mainClass": "JAVA.FirstClass",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
             "name": "Launch Java Program",
             "request": "launch",
             "mainClass": ""
