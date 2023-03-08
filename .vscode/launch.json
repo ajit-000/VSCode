@@ -5,6 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
+            "name": "FirstProg",
+            "request": "launch",
+            "mainClass": "FirstProg",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "FirstProg",
+            "request": "launch",
+            "mainClass": "JAVA.FirstProg",
+            "projectName": "VS Code_d6811616"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
