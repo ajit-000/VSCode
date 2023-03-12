@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Assignment",
+            "request": "launch",
+            "mainClass": "Assignment",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "ConditionalState",
+            "request": "launch",
+            "mainClass": "ConditionalState",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "TakeInput",
+            "request": "launch",
+            "mainClass": "TakeInput",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "variab",
+            "request": "launch",
+            "mainClass": "variab",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "FirstClass",
+            "request": "launch",
+            "mainClass": "FirstClass",
+            "projectName": "VS Code_d6811616"
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
             "name": "FirstClass",
             "request": "launch",
             "mainClass": "JAVA.FirstClass",
